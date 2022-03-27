@@ -1,0 +1,79 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Project url,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Description,Environment,Watchers,Watchers,Watchers,Watchers Id,Watchers Id,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Outward issue link (Cloners),Outward issue link (Relates),Outward issue link (Relates),Attachment,Attachment,Custom field (Acceptance Criteria),Custom field (Audio Stream),Custom field (Baseline end date),Custom field (Baseline start date),Custom field (Business Value),Custom field (Call Audio Experience(Ux)),Custom field (Category),Custom field (Change risk),Custom field (Change start date),Custom field (Change type),Custom field (Close Build),Custom field (Close date),Custom field (Comments),Custom field (Committed),Custom field (Connected Device),Custom field (Connected Device 2),Custom field (Consequence),Custom field (Current Moment),Custom field (Customer),Custom field (Date Code),Custom field (Date added to PI),Custom field (Defect),Custom field (Descriptions),Custom field (Desk Phone Brand - Model),Custom field (Development),Custom field (Device Category),Custom field (Device Name),Custom field (Device Type),Custom field (Device lifecycle),Custom field (Dropout reason),Custom field (End date),Custom field (Epic Link),Custom field (Estimate Apps competence),Custom field (Estimate Audio BT Competence),Custom field (Estimate Audio DECT/USB Competence),Custom field (Estimate Audio Newport Competence),Custom field (Estimate BT Competence),Custom field (Estimate DECT/USB Competence),Custom field (Estimate ESW WiFi Competence),Custom field (Estimate Jabra+ Competence),Custom field (Estimate Online Competence),Custom field (Estimate SDK Competence),Custom field (Estimate Shared Services Competence),Custom field (Estimate Tech Audio Competence),Custom field (Estimate Video Competence),Custom field (Estimated Cost),Custom field (Expected Moment),Custom field (Expected behaviour),Custom field (FFA Type),Custom field (FW Version(UX)),Custom field (Feedback Type),Custom field (Fixed in),Custom field (Forecasted PI),Custom field (Found During(Ux-Audio)),Custom field (Found by),Custom field (Found in),Custom field (Function),Custom field (Hardware),Custom field (Impact),Custom field (Impact value),Custom field (Inherent impact),Custom field (Inherent probability),Custom field (Inherent risk),Custom field (Inventory),Custom field (Issue color),Custom field (Jama proxy),Custom field (Link Device Location),Custom field (Link to Jama),Custom field (Link to Jama Features),Custom field (Link to Report),Custom field (Maturity Level),Custom field (Mitigation),Custom field (Multiple devices connected),Custom field (Next Steps),Custom field (Original Estimate (Calculated)),Custom field (PI Sprint),Custom field (PQB),Custom field (Parts),Custom field (Pending Action),Custom field (Percent completed),Custom field (Planned Deployment Date),Custom field (Platform Request type),Custom field (Previous Moment),Custom field (Priority),Custom field (Progress),Custom field (Project (AV)),Custom field (Project Picker),Custom field (Project phase),Custom field (QA Review Requested),Custom field (Rank),Custom field (Region and Country),Custom field (Reopened date),Custom field (Reproducibility),Custom field (Request Type),Custom field (Request participants),Custom field (Residual impact),Custom field (Residual probability),Custom field (Residual risk),Custom field (Resolution Date Code),Custom field (Responsible CQM),Custom field (Responsible SE),Custom field (Responsible SQM),Custom field (Review Verdict),Custom field (Risk Impact),Custom field (Risk Probability),Custom field (Risk Weight),Custom field (Root Cause),Custom field (SKU/Part Number),Custom field (SW Version),Custom field (Sales Impact),Custom field (Sample Quantity),Custom field (Sample availability),Custom field (Sample version),Custom field (Samples Location),Custom field (Samples Shipping Date),Satisfaction rating,Custom field (Save FFA Samples),Custom field (Serial Number),Custom field (Smart Sound Experience),Custom field (Softphone),Custom field (Solution),Custom field (Source),Custom field (Start date),Custom field (Start date),Custom field (Station),Custom field (Story Points),Custom field (Story point estimate),Custom field (Symptom Code),Custom field (TRL Level),Custom field (Talking Points),Custom field (Target end),Custom field (Target release),Custom field (Target start),Custom field (Team),Custom field (Test),Custom field (UX ID),Custom field (UX Test Type),Custom field (Unit ID),Custom field (Units impacted),Custom field (Usage Mode),Custom field (User Ambience),Custom field (User Impact),Custom field (User Location(Ux)),Custom field (User Picker (single user)),Custom field ([CHART] Date of First Response),Custom field (hub),Comment,Comment,Comment,Status Category
+"CLONE - [Multi-use, Chime+Teams] The active call will be ended automatically when gets incoming call from another SP",STRAT-262,111685,Bug,Open,STRAT,Strategic Alliance,software,Jesper Birk Jepsen,5bc1eb6553dc9c5087ee053b,,,Major,,Jesper Birk Jepsen,5bc1eb6553dc9c5087ee053b,Sid Xue,5dce4cbb60719b0dfa313b53,Ritu Sahu,5f27d26470fb250022e56bdf,29/Jan/21 12:01,24/Feb/21 15:28,13/Jan/22 10:14,,,"*Extended description*
+SW: 1.4.1
+HW: Beta
+
+*Environment information / test conditions*
+DUT: Evolve2 30 MS Mono USB-C v1.4.1, Evolve2 30 UC Stereo USB-A v1.4.1
+OS: Win 10-64 bit 10.0.19042.685 (2009 build)
+SP: Teams 1.3.00.30866, Zoom 5.4.7(59784.1220), Amazon Chime 4.35.10050.0 build #1.0.210414.0			
+
+
+*Steps to reproduce / failure sequence*
+1. Connect HS to PC via cable
+2. Run Amazon Chime and MS Teams on the PC
+3. Establish an active call on Amazon Chime
+4. Make an incoming call from ESP to MS Teams ==>Then the active call on Amazon Chime would be ended automatically > Fail
+
+
+*Expected result / Requirement*
+The active call on Amazon Chime should not be ended automatically when gets incoming call from Teams
+
+
+*Actual result / Failure mode*
+The active call on Amazon Chime will be ended automatically when gets incoming call from Teams
+
+
+*Error rate*
+100%
+
+
+*Additional information that might be relevant*
+1. The same on Teams active call + Amazon Chime incoming call
+2. The same on Amazon Chime active call + Zoom incoming call
+3. Zoom active call + Amazon Chime incoming call, not this issue
+4. Plantronics HS doesn't have this issue, we would like to know if it is possible to improve on Jabra HS side.",,Jesper Birk Jepsen,Peter Hoey Andersen,Ritu Sahu,5bc1eb6553dc9c5087ee053b,5c1a5f3316ac1e4f7cbb9a74,5f27d26470fb250022e56bdf,,,,,,,,,FRIG-249,FRIG-191,NEWPORT-7923,29/Jan/21 12:01;rsahu;active call will be ended automatically when gets 2nd incoming call(Frigg).ufo;https://jabra1.atlassian.net/secure/attachment/50453/active+call+will+be+ended+automatically+when+gets+2nd+incoming+call%28Frigg%29.ufo,29/Jan/21 12:01;rsahu;active call will be ended automatically when gets 2nd incoming call(Plantronics).ufo;https://jabra1.atlassian.net/secure/attachment/50454/active+call+will+be+ended+automatically+when+gets+2nd+incoming+call%28Plantronics%29.ufo,,,,,,,,,,,,,,,,,,,,,,,,,{},,,,,,,COUGA-1465,,,,,,,,,,,,,,,,,,,,,,,,1.4.1,Strategic Alliances,,,,,,,,,,,https://jabra.jamacloud.com/perspective.req?projectId=20463&docId=8138537,,,,,,,,,,,,,,,,,,,,,,0|i0fzgn:,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,NA,,,,,,,,,,,,,,,,2021-01-29 11:04:39.537,,"29/Jan/21 12:04;5f27d26470fb250022e56bdf;This is SP compatibility issue with Teams and Amazon Chime SPs only. And it is observed across all GN headsets.
+
+In order to address this issue , Strategic Alliance has to check with respective SPs clients for HID signalling.
+
+Workaround : Disabling call control in Amazon Chime under Audio settings.","02/Feb/21 12:17;5bc1eb6553dc9c5087ee053b;[~accountid:5c1a5f3316ac1e4f7cbb9a74] is this acknowledged from our side?
+If so we can park this issue and add to knowledge base so it is not reported in future.","08/Feb/21 12:26;5c1a5f3316ac1e4f7cbb9a74;Yep, this is due to implementation issues in Amazon Chime and can be resolved with the workaround highlighted by Ritu above. We’ve informed Amazon of similar issues (same root cause) in the past but this has not been a priority for them to fix. ",To Do
+"[SP IOP][Zoom meeting][Mute]Transfer muted call from PC to DUT, the muted call is unmuted automatically",STRAT-261,102500,Bug,Resolved,STRAT,Strategic Alliance,software,Jesper Birk Jepsen,5bc1eb6553dc9c5087ee053b,,,Minor,Fixed,Erik Sonne,5bc1e9d1f8c7de2b598ba7d3,Sonia Qiu,5eb51fde5862510b795a42a6,Sonia Qiu,5eb51fde5862510b795a42a6,20/Oct/20 08:30,26/May/21 09:50,13/Jan/22 10:14,12/Jan/21 10:31,,"Build: MP
+
+SW: 1.15.0
+
+HW: Evolve 2 40 all varients
+
+*Environment information / test conditions*
+OS:WIN_64 v2004(OS Build19041.572)
+
+SP:Zoom meetings v5.3.2
+
+JDO: V4.0.11531
+
+*Steps to reproduce / failure sequence*
+1.Establish a call between ESP and SP;
+
+2.Mute the call from the DUT;
+
+3.Use SP to transfer the call from the DUT to the PC;
+
+4.Use SP to transfer the call from the PC to the DUT.
+
+*Expected result / Requirement*
+
+Step 4:The call is still muted, there is the Rx in the DUT.
+
+*Actual result / Failure mode*
+
+Step 4:The call is  unmuted automatically, there is the Rx in the DUT.
+
+*Error rate*
+always
+
+*Additional information that might be relevant*
+Compare to Plantronics C5220 USB-C, it works well.
+
+Compare to Charles with link380/Frig, the same wrong behavior.
+
+Compare to Frig v0.4.0, the same wrong behavior, I think maybe it's the SP upgrade problem, please have double check.",,Kim Wulf-Andersen,Sonia Qiu,Tina Wu,5bc1ece524ceb903f8e86779,5eb51fde5862510b795a42a6,5bc1f1a5412ef82f096073e9,28800,28800,,0%,28800,28800,,,FRIG-138,,,20/Oct/20 08:30;extsqiu;Frig 138.ufo;https://jabra1.atlassian.net/secure/attachment/46496/Frig+138.ufo,,,,,,,,,,,,,,,,,,,,,,,,,,{},,,,,,,COUGA-1299,,,,,,,,,,,,,,,,,,,,Nightly build on Darwin VP1 branch 13-01-2021,,,,1.15.0,Strategic Alliances,,,,,,,,,,,https://jabra.jamacloud.com/perspective.req?projectId=20463&docId=7718019,,,,,,,,,,,,,,,,,,,,,,0|i0fqrr:,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,NA,,,,,,,,,,,,,,,,2020-12-03 16:17:04.154,,"03/Dec/20 17:17;5bc1ece524ceb903f8e86779;Please refer to detailed comments in frigg issue. My best guess is that this is a SP issue, suggest to move to zoom epic.","14/Jan/21 04:15;5bc1f1a5412ef82f096073e9;SW developer checked it's a SP issue, so send to SA project for confirm from third party company. ",,Done

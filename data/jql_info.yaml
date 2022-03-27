@@ -1,0 +1,11 @@
+name: chalin
+
+log:
+  name: py30
+  level: INFO
+  file_ok: False
+  file_name: py30.log
+
+mysql:
+  user: nmb
+  passwd: 123456
